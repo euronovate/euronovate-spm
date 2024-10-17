@@ -7,7 +7,7 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
-        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"],
+        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"]),
         .library(name: "ENMobileCoreSDK",  targets: ["ENMobileCoreAuxiliaryTarget"]),
     ],
     dependencies: [
