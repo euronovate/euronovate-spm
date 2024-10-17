@@ -7,7 +7,8 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
-        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"])
+        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"]),
+        .library(name: "ENMobileCoreSDK",  targets: ["ENMobileCoreAuxiliaryTarget"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
@@ -34,12 +35,6 @@ let package = Package(
             dependencies: [
                 .target(name: "ENMobileSetupSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
-                .target(name: "ENMobileCoreSDK"),
-                .product(name: "Alamofire", package: "Alamofire"),
-                .product(name: "SwiftJWT", package: "Swift-JWT"),
-                .product(name: "Factory", package: "Factory"),
-                .product(name: "ZIPFoundation", package: "ZIPFoundation"),
-                .product(name: "SwiftKeychainWrapper", package: "SwiftKeychainWrapper")
             ],
             path: "ENMobileSetup"
         ),
