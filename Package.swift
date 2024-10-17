@@ -7,8 +7,7 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
-        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"]),
-        .library(name: "ENMobileCoreSDK",  targets: ["ENMobileCoreAuxiliaryTarget"]),
+        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"])
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
@@ -41,7 +40,7 @@ let package = Package(
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.0.1/ENMobileCoreSDK.zip",
-            checksum: "c85257038e2e188f949c54b273118927852bd5123da7e77303ec4eacb6fa1439"
+            checksum: "f3b524218bbe152a843e076f897e810d392d8a4a21b0fe6ff3733ccddcefa052"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
