@@ -14,6 +14,7 @@ let package = Package(
         .package(url: "https://github.com/hmlongco/Factory", from: "2.2.0"),
         .package(url: "https://github.com/Kitura/Swift-JWT", from: "3.6.200"),
         .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.17")
+        .package(url: "https://github.com/jrendel/SwiftKeychainWrapper", from: "4.0.1")
     ],
     targets: [
         .target(
