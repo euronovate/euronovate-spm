@@ -34,7 +34,7 @@ let package = Package(
             dependencies: [
                 .target(name: "ENMobileSetupSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
-                .product(name: "Factory", package: "Factory"),
+                .target(name: "ENMobileCoreSDK"),
             ],
             path: "ENMobileSetup"
         ),
