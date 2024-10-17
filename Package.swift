@@ -13,7 +13,7 @@ let package = Package(
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
         .package(url: "https://github.com/hmlongco/Factory", from: "2.2.0"),
         .package(url: "https://github.com/Kitura/Swift-JWT", from: "3.6.200"),
-        .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.17")
+        .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.17"),
         .package(url: "https://github.com/jrendel/SwiftKeychainWrapper", from: "4.0.1")
     ],
     targets: [
@@ -24,7 +24,7 @@ let package = Package(
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "SwiftJWT", package: "Swift-JWT"),
                 .product(name: "Factory", package: "Factory"),
-                .product(name: "ZIPFoundation", package: "ZIPFoundation")
+                .product(name: "ZIPFoundation", package: "ZIPFoundation"),
                 .product(name: "SwiftKeychainWrapper", package: "SwiftKeychainWrapper")
             ],
             path: "ENMobileCore"
