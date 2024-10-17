@@ -33,6 +33,7 @@ let package = Package(
             name: "ENMobileSetupSDKAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileSetupSDK"),
+                .target(name: "ENMobileCoreSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
             ],
             path: "ENMobileSetup"
