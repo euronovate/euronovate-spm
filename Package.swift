@@ -2,15 +2,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "ENMobileCoreSDK",
+    name: "ENMobileSDK",
     platforms: [
         .iOS(.v14)
     ],
     products: [
-        .library(
-            name: "ENMobileCoreSDK",
-            targets: ["AuxiliaryTarget"]
-        ),
+        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
@@ -20,7 +17,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "AuxiliaryTarget",
+            name: "ENMobileCoreAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileCoreSDK"),
                 .product(name: "Alamofire", package: "Alamofire"),
@@ -30,10 +27,23 @@ let package = Package(
             ],
             path: "AuxiliaryEmpty"
         ),
+        .target(
+            name: "ENMobileSetupSDKAuxiliaryTarget",
+            dependencies: [
+                .target(name: "ENMobileSetupSDK"),
+                .target(name: "ENMobileCoreAuxiliaryTarget"),
+            ],
+            path: "AuxiliaryEmpty"
+        ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.0.1/ENMobileCoreSDK.zip",
-            checksum: "6ff2bc257ed3f13d434d7814d570b9562d192dc139d77e605d13a327fd959a85"
+            checksum: "7c6dc618175101866d4d09ebd0303dca85c1c55707b243a4af2f4d252f8bba62"
         ),
+        .binaryTarget(
+            name: "ENMobileSetupSDK",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.0.1/ENMobileSetupSDK.zip",
+            checksum: "ca2101d719b933547e7b9926a6fa045b2f3a1a450d6dea44a1fbcf9ed42712a6"
+        )
     ]
 )
