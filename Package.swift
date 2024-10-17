@@ -25,7 +25,7 @@ let package = Package(
                 .product(name: "Factory", package: "Factory"),
                 .product(name: "ZIPFoundation", package: "ZIPFoundation")
             ],
-            path: "AuxiliaryEmpty"
+            path: "ENMobileCore"
         ),
         .target(
             name: "ENMobileSetupSDKAuxiliaryTarget",
@@ -33,7 +33,7 @@ let package = Package(
                 .target(name: "ENMobileSetupSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
             ],
-            path: "AuxiliaryEmpty"
+            path: "ENMobileSetup"
         ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
