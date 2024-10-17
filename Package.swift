@@ -33,7 +33,6 @@ let package = Package(
             name: "ENMobileSetupSDKAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileSetupSDK"),
-                .target(name: "ENMobileCoreSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
             ],
             path: "ENMobileSetup"
@@ -46,7 +45,7 @@ let package = Package(
         .binaryTarget(
             name: "ENMobileSetupSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.0.1/ENMobileSetupSDK.zip",
-            checksum: "ca2101d719b933547e7b9926a6fa045b2f3a1a450d6dea44a1fbcf9ed42712a6"
+            checksum: "9d6861371666805b7a61a386d3af1116e4ea5933a071113c1a1535012eda8e4e"
         )
     ]
 )
