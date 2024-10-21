@@ -7,7 +7,8 @@ let package = Package(
         .iOS(.v14)
     ],
     products: [
-        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"])
+        .library(name: "ENMobileSetupSDK",  targets: ["ENMobileSetupSDKAuxiliaryTarget"]),
+        .library(name: "ENMobileSignatureSDK",  targets: ["ENMobileSignatureSDKAuxiliaryTarget"])
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
@@ -37,6 +38,14 @@ let package = Package(
             ],
             path: "ENMobileSetup"
         ),
+        .target(
+            name: "ENMobileSignatureSDKAuxiliaryTarget",
+            dependencies: [
+                .target(name: "ENMobileSignatureSDK"),
+                .target(name: "ENMobileCoreAuxiliaryTarget"),
+            ],
+            path: "ENMobileSetup"
+        ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.0.1/ENMobileCoreSDK.zip",
@@ -46,6 +55,11 @@ let package = Package(
             name: "ENMobileSetupSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.0.1/ENMobileSetupSDK.zip",
             checksum: "214f2092ee851d089b974533353ceb2bd21730590348faca8bd1b66caa4d19bb"
+        ),
+        .binaryTarget(
+            name: "ENMobileSignatureSDK",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.0.1/ENMobileSignatureSDK.zip",
+            checksum: "e1b1841d37fe6fabf0269f57b3b7b9b883dfd2df211d0672ce107d09cfa84912"
         )
     ]
 )
