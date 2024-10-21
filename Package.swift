@@ -62,12 +62,10 @@ let package = Package(
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.0.1/ENMobileSignatureSDK.zip",
             checksum: "d6221ada128c8510c7446c32e1f695d7a6c8747aa3b1ccda52c90c601c2a9de6"
         ),
-        targets: [
         .binaryTarget(
             name: "ENLibPdf",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENLibPdf/2.4.3/ENLibPdf.zip",
             checksum: "9d76f45e543f597a54fb57eaea3a8994c4d85cab44d91db2e01ebd95c47a14d9"
         )
-    ]
     ]
 )
