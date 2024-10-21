@@ -44,7 +44,7 @@ let package = Package(
                 .target(name: "ENMobileSignatureSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
             ],
-            path: "ENMobileSetup"
+            path: "ENMobileSignature"
         ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
