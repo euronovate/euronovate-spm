@@ -60,17 +60,17 @@ let package = Package(
 
         .binaryTarget(
             name: "ENMobileCoreSDK",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/1.0.0/ENMobileCoreSDK.zip",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.0.9/ENMobileCoreSDK.zip",
             checksum: "d1db82acc12cad6cd679dbd9a9a60c5ec71ea5f3c23f268a315deebbb8f256f3"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/1.0.0/ENMobileSetupSDK.zip",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.0.9/ENMobileSetupSDK.zip",
             checksum: "8555591ef8c93673346a5aa8daa2deaff1be3bc5cb9ea3d6ca66150bd70d748e"
         ),
         .binaryTarget(
             name: "ENMobileSignatureSDK",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/1.0.0/ENMobileSignatureSDK.zip",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.0.9/ENMobileSignatureSDK.zip",
             checksum: "8f55204600173478047dde19869054e347231f70a3cd47431fc6964316e4876f"
         ),
         .binaryTarget(
