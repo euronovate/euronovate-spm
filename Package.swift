@@ -53,7 +53,9 @@ let package = Package(
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
                 .target(name: "ENLibPdf"),
                 .target(name: "ENCrossToolbox"),
-                .product(name: "CwlCatchException", package: "CwlCatchException")
+                .product(name: "CwlCatchException", package: "CwlCatchException"),
+                .product(name: "Factory", package: "Factory"),
+                .product(name: "ZIPFoundation", package: "ZIPFoundation")
             ],
             path: "ENMobileSignature"
         ),
