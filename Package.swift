@@ -9,11 +9,17 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileSetupSDK",
-            targets: ["ENMobileSetupSDKAuxiliaryTarget"]
+            targets: [
+                "ENMobileSetupSDK",
+                "ENMobileSetupSDKAuxiliaryTarget"
+            ]
         ),
         .library(
             name: "ENMobileSignatureSDK",
-            targets: ["ENMobileSignatureSDKAuxiliaryTarget"]
+            targets: [
+                "ENMobileSignatureSDK",
+                "ENMobileSignatureSDKAuxiliaryTarget"
+            ]
         )
     ],
     dependencies: [
@@ -41,6 +47,7 @@ let package = Package(
             name: "ENMobileSetupSDKAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileSetupSDK"),
+                .target(name: "ENMobileCoreSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget")
             ],
             path: "ENMobileSetup"
@@ -49,7 +56,9 @@ let package = Package(
             name: "ENMobileSignatureSDKAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileSignatureSDK"),
+                .target(name: "ENMobileSetupSDK"),
                 .target(name: "ENMobileSetupSDKAuxiliaryTarget"),
+                .target(name: "ENMobileCoreSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
                 .target(name: "ENLibPdf"),
                 .target(name: "ENCrossToolbox"),
