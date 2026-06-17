@@ -9,37 +9,19 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileSetupSDK",
-            targets: [
-                "ENMobileSetupSDK",
-                "ENMobileSetupSDKAuxiliaryTarget"
-            ]
+            targets: ["ENMobileSetupSDKAuxiliaryTarget"]
         ),
         .library(
             name: "ENMobileSignatureSDK",
-            targets: [
-                "ENMobileSignatureSDK",
-                "ENMobileSignatureSDKAuxiliaryTarget"
-            ]
+            targets: ["ENMobileSignatureSDKAuxiliaryTarget"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.8.0"),
-        .package(url: "https://github.com/hmlongco/Factory", from: "2.2.0"),
-        .package(url: "https://github.com/Kitura/Swift-JWT", from: "4.0.0"),
-        .package(url: "https://github.com/weichsel/ZIPFoundation.git", from: "0.9.17"),
-        .package(url: "https://github.com/jrendel/SwiftKeychainWrapper", from: "4.0.1"),
-        .package(url: "https://github.com/mattgallagher/CwlCatchException", from: "2.2.1")
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "ENMobileCoreAuxiliaryTarget",
             dependencies: [
-                .target(name: "ENMobileCoreSDK"),
-                .product(name: "Alamofire", package: "Alamofire"),
-                .product(name: "SwiftJWT", package: "Swift-JWT"),
-                .product(name: "Factory", package: "Factory"),
-                .product(name: "ZIPFoundation", package: "ZIPFoundation"),
-                .product(name: "SwiftKeychainWrapper", package: "SwiftKeychainWrapper")
+                .target(name: "ENMobileCoreSDK")
             ],
             path: "ENMobileCore"
         ),
@@ -47,7 +29,6 @@ let package = Package(
             name: "ENMobileSetupSDKAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileSetupSDK"),
-                .target(name: "ENMobileCoreSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget")
             ],
             path: "ENMobileSetup"
@@ -56,15 +37,10 @@ let package = Package(
             name: "ENMobileSignatureSDKAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileSignatureSDK"),
-                .target(name: "ENMobileSetupSDK"),
                 .target(name: "ENMobileSetupSDKAuxiliaryTarget"),
-                .target(name: "ENMobileCoreSDK"),
                 .target(name: "ENMobileCoreAuxiliaryTarget"),
                 .target(name: "ENLibPdf"),
-                .target(name: "ENCrossToolbox"),
-                .product(name: "CwlCatchException", package: "CwlCatchException"),
-                .product(name: "Factory", package: "Factory"),
-                .product(name: "ZIPFoundation", package: "ZIPFoundation")
+                .target(name: "ENCrossToolbox")
             ],
             path: "ENMobileSignature"
         ),
