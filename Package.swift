@@ -48,7 +48,7 @@ let package = Package(
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.9.0/ENMobileCoreSDK.zip",
-            checksum: "2af4995fa82ca3b8a17db77c74f678bffcece27d41e5b770246d822f4c80c266"
+            checksum: "acbd09e144b306a8da2341a27c84ce1005af6b3618fcd0e02cde3fb843aa83fb"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
