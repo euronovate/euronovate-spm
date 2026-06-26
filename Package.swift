@@ -41,9 +41,7 @@ let package = Package(
             dependencies: [
                 .target(name: "ENMobileSignatureSDK"),
                 .target(name: "ENMobileSetupSDKAuxiliaryTarget"),
-                .target(name: "ENMobileCoreAuxiliaryTarget"),
-                .target(name: "ENLibPdf"),
-                .target(name: "ENCrossToolbox")
+                .target(name: "ENMobileCoreAuxiliaryTarget")
             ],
             path: "ENMobileSignature"
         ),
@@ -61,16 +59,6 @@ let package = Package(
             name: "ENMobileSignatureSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.9.0/ENMobileSignatureSDK.zip",
             checksum: "ea315194964171490a18d1ca446dce171f85e3b1db53847a4cf92558d2ce55a1"
-        ),
-        .binaryTarget(
-            name: "ENLibPdf",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENLibPdf/2.4.8/ENLibPdf.zip",
-            checksum: "cc9c5bc11466f44840aad7397893b262511b2f647e6483bb2fcf3f0430c45c4c"
-        ),
-        .binaryTarget(
-            name: "ENCrossToolbox",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENCrossToolbox/1.3.0/ENCrossToolbox.zip",
-            checksum: "77faf3cd403bd6077d2bf977ebd40a9018ab99b63dd07a2f86996a85b174baf5"
         )
     ]
 )
