@@ -41,24 +41,36 @@ let package = Package(
             dependencies: [
                 .target(name: "ENMobileSignatureSDK"),
                 .target(name: "ENMobileSetupSDKAuxiliaryTarget"),
-                .target(name: "ENMobileCoreAuxiliaryTarget")
+                .target(name: "ENMobileCoreAuxiliaryTarget"),
+                .target(name: "ENLibPdf"),
+                .target(name: "ENCrossToolbox")
             ],
             path: "ENMobileSignature"
         ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.9.0/ENMobileCoreSDK.zip",
-            checksum: "0e107fcba695ef50fee25acff5db3241663201428579807684ad55d05289d357"
+            checksum: "e3ffd576ebded0b0858894f2ec804dd5e5176a4f4d15f344b0ae13f659e4d7e4"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.9.0/ENMobileSetupSDK.zip",
-            checksum: "18cc6891dd28dbe15cc08de6387c5432a1516f9604797ac47514c00cf93046aa"
+            checksum: "16c3cf0bca11c1af657ff34b654f4228f43c6b78f06c226bfb0fe771b5531ccd"
         ),
         .binaryTarget(
             name: "ENMobileSignatureSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.9.0/ENMobileSignatureSDK.zip",
-            checksum: "77bdb5c5458d9b4fadc23775d06245cf6036de1955e2e24c87c0590bcaa01238"
+            checksum: "21575f137d25b63686bb719ee143f6d4dfaf21f677df3a7598af5f54ebeb130a"
+        ),
+        .binaryTarget(
+            name: "ENLibPdf",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENLibPdf/2.4.8/ENLibPdf.zip",
+            checksum: "cc9c5bc11466f44840aad7397893b262511b2f647e6483bb2fcf3f0430c45c4c"
+        ),
+        .binaryTarget(
+            name: "ENCrossToolbox",
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENCrossToolbox/1.3.0/ENCrossToolbox.zip",
+            checksum: "77faf3cd403bd6077d2bf977ebd40a9018ab99b63dd07a2f86996a85b174baf5"
         )
     ]
 )
