@@ -16,15 +16,11 @@ let package = Package(
             targets: ["ENMobileSignatureSDKAuxiliaryTarget"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.9.1")
-    ],
     targets: [
         .target(
             name: "ENMobileCoreAuxiliaryTarget",
             dependencies: [
                 .target(name: "ENMobileCoreSDK"),
-                .product(name: "AlamofireDynamic", package: "Alamofire")
             ],
             path: "ENMobileCore"
         ),
@@ -50,17 +46,17 @@ let package = Package(
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.9.0/ENMobileCoreSDK.zip",
-            checksum: "e3ffd576ebded0b0858894f2ec804dd5e5176a4f4d15f344b0ae13f659e4d7e4"
+            checksum: "e5d66218c68c3413e92ed877089226a3fa797f6442ba62e2a09ada664489bd6f"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.9.0/ENMobileSetupSDK.zip",
-            checksum: "16c3cf0bca11c1af657ff34b654f4228f43c6b78f06c226bfb0fe771b5531ccd"
+            checksum: "faaf5449fd90b37d18f55e939e8c84429a51df5150b87e502908de0315d1bede"
         ),
         .binaryTarget(
             name: "ENMobileSignatureSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.9.0/ENMobileSignatureSDK.zip",
-            checksum: "21575f137d25b63686bb719ee143f6d4dfaf21f677df3a7598af5f54ebeb130a"
+            checksum: "2af4d501ed5afa9484a569d41029f0fd5e119cead6fc6442f493b8d163f1496e"
         ),
         .binaryTarget(
             name: "ENLibPdf",
