@@ -9,40 +9,23 @@ let package = Package(
     products: [
         .library(
             name: "ENMobileSetupSDK",
-            targets: ["ENMobileSetupSDKAuxiliaryTarget"]
+            targets: [
+                "ENMobileSetupSDK",
+                "ENMobileCoreSDK"
+            ]
         ),
         .library(
             name: "ENMobileSignatureSDK",
-            targets: ["ENMobileSignatureSDKAuxiliaryTarget"]
+            targets: [
+                "ENMobileSignatureSDK",
+                "ENMobileSetupSDK",
+                "ENMobileCoreSDK",
+                "ENLibPdf",
+                "ENCrossToolbox"
+            ]
         )
     ],
     targets: [
-        .target(
-            name: "ENMobileCoreAuxiliaryTarget",
-            dependencies: [
-                .target(name: "ENMobileCoreSDK"),
-            ],
-            path: "ENMobileCore"
-        ),
-        .target(
-            name: "ENMobileSetupSDKAuxiliaryTarget",
-            dependencies: [
-                .target(name: "ENMobileSetupSDK"),
-                .target(name: "ENMobileCoreAuxiliaryTarget")
-            ],
-            path: "ENMobileSetup"
-        ),
-        .target(
-            name: "ENMobileSignatureSDKAuxiliaryTarget",
-            dependencies: [
-                .target(name: "ENMobileSignatureSDK"),
-                .target(name: "ENMobileSetupSDKAuxiliaryTarget"),
-                .target(name: "ENMobileCoreAuxiliaryTarget"),
-                .target(name: "ENLibPdf"),
-                .target(name: "ENCrossToolbox")
-            ],
-            path: "ENMobileSignature"
-        ),
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.9.0/ENMobileCoreSDK.zip",
