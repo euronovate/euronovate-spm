@@ -29,17 +29,17 @@ let package = Package(
         .binaryTarget(
             name: "ENMobileCoreSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.9.0/ENMobileCoreSDK.zip",
-            checksum: "e5d66218c68c3413e92ed877089226a3fa797f6442ba62e2a09ada664489bd6f"
+            checksum: "99475ade09159e9c8dc29eb40c7114cfb596179a316a64663f6ab4b77850c852"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.9.0/ENMobileSetupSDK.zip",
-            checksum: "faaf5449fd90b37d18f55e939e8c84429a51df5150b87e502908de0315d1bede"
+            checksum: "386b2635654a2972e2194c9f6e5436f516887730f549c4dfa32b9652f9ff7316"
         ),
         .binaryTarget(
             name: "ENMobileSignatureSDK",
             url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.9.0/ENMobileSignatureSDK.zip",
-            checksum: "2af4d501ed5afa9484a569d41029f0fd5e119cead6fc6442f493b8d163f1496e"
+            checksum: "8a09d83cd1ff9688a4478abc4c1590757351227b3d01de7a48dae0035ba9995d"
         ),
         .binaryTarget(
             name: "ENLibPdf",
