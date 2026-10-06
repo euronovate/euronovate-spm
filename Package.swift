@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "ENMobileSDK",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v15)
     ],
     products: [
         .library(
@@ -28,18 +28,18 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ENMobileCoreSDK",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/0.9.0/ENMobileCoreSDK.zip",
-            checksum: "0cc899a58921547252d35505a70853debe44af7bb4629371c0b6ed693a61fb50"
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileCoreSDK/1.0.0/ENMobileCoreSDK.zip",
+            checksum: "757f6530612318e037f8053a709e76e0714efcedeaf71a85894fa7fbac90cf68"
         ),
         .binaryTarget(
             name: "ENMobileSetupSDK",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/0.9.0/ENMobileSetupSDK.zip",
-            checksum: "9163da5a2588edb0dea91f300a6531f5eccb4f72651888cb77200645a9a7f59c"
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSetupSDK/1.0.0/ENMobileSetupSDK.zip",
+            checksum: "04928f937ac0f4847ad7736450c30812f728cb05d029018dc431a67c82e0d97f"
         ),
         .binaryTarget(
             name: "ENMobileSignatureSDK",
-            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/0.9.0/ENMobileSignatureSDK.zip",
-            checksum: "c6db14f692fd61c12886f3b26e5e6dfe6048c9386a235fb64adb1d80dee0b3ee"
+            url: "https://xcframeworks.s3.eu-south-1.amazonaws.com/ENMobileSignatureSDK/1.0.0/ENMobileSignatureSDK.zip",
+            checksum: "fcf2aff31dcea608ccda1f8b38abefb217a3e2da088bc84ca0f5e7a38ce9e74b"
         ),
         .binaryTarget(
             name: "ENLibPdf",
